@@ -1,2 +1,17 @@
 <h2>Team Selector</h2>
 <p>Select your champions and the enemy champions here.</p>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Select Champion</mat-label>
+  <input
+  type="text"
+  placeholder="Pick a champion"
+  matInput
+  [formControl]="championInputControl"
+  [matAutocomplete]="auto">
+</mat-form-field>
+<mat-autocomplete #auto="matAutocomplete">
+  @for (champ of champions(); track champ.name){
+    <mat-option [value]="champ.name">{{champ.name}}</mat-option>
+  }
+</mat-autocomplete>
