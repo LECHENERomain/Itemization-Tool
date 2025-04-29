@@ -1,512 +1,512 @@
 [
   {
-    "id": "Aatrox", "name": "Aatrox", "image": "../../../public/champs/Aatrox.png"
+    "id": "Aatrox", "name": "Aatrox", "image": "/champs/Aatrox.png"
   },
   {
-    "id": "Ahri", "name": "Ahri", "image": "../../../public/champs/Ahri.png"
+    "id": "Ahri", "name": "Ahri", "image": "/champs/Ahri.png"
   },
   {
-    "id": "Akali", "name": "Akali", "image": "../../../public/champs/Akali.png"
+    "id": "Akali", "name": "Akali", "image": "/champs/Akali.png"
   },
   {
-    "id": "Akshan", "name": "Akshan", "image": "../../../public/champs/Akshan.png"
+    "id": "Akshan", "name": "Akshan", "image": "/champs/Akshan.png"
   },
   {
-    "id": "Alistar", "name": "Alistar", "image": "../../../public/champs/Alistar.png"
+    "id": "Alistar", "name": "Alistar", "image": "/champs/Alistar.png"
   },
   {
-    "id": "Ambessa", "name": "Ambessa", "image": "../../../public/champs/Ambessa.png"
+    "id": "Ambessa", "name": "Ambessa", "image": "/champs/Ambessa.png"
   },
   {
-    "id": "Amumu", "name": "Amumu", "image": "../../../public/champs/Amumu.png"
+    "id": "Amumu", "name": "Amumu", "image": "/champs/Amumu.png"
   },
   {
-    "id": "Anivia", "name": "Anivia", "image": "../../../public/champs/Anivia.png"
+    "id": "Anivia", "name": "Anivia", "image": "/champs/Anivia.png"
   },
   {
-    "id": "Annie", "name": "Annie", "image": "../../../public/champs/Annie.png"
+    "id": "Annie", "name": "Annie", "image": "/champs/Annie.png"
   },
   {
-    "id": "Aphelios", "name": "Aphelios", "image": "../../../public/champs/Aphelios.png"
+    "id": "Aphelios", "name": "Aphelios", "image": "/champs/Aphelios.png"
   },
   {
-    "id": "Ashe", "name": "Ashe", "image": "../../../public/champs/Ashe.png"
+    "id": "Ashe", "name": "Ashe", "image": "/champs/Ashe.png"
   },
   {
-    "id": "AurelionSol", "name": "Aurelion Sol", "image": "../../../public/champs/AurelionSol.png"
+    "id": "AurelionSol", "name": "Aurelion Sol", "image": "/champs/AurelionSol.png"
   },
   {
-    "id": "Aurora", "name": "Aurora", "image": "../../../public/champs/Aurora.png"
+    "id": "Aurora", "name": "Aurora", "image": "/champs/Aurora.png"
   },
   {
-    "id": "Azir", "name": "Azir", "image": "../../../public/champs/Azir.png"
+    "id": "Azir", "name": "Azir", "image": "/champs/Azir.png"
   },
   {
-    "id": "Bard", "name": "Bard", "image": "../../../public/champs/Bard.png"
+    "id": "Bard", "name": "Bard", "image": "/champs/Bard.png"
   },
   {
-    "id": "Belveth", "name": "Bel'Veth", "image": "../../../public/champs/Belveth.png"
+    "id": "Belveth", "name": "Bel'Veth", "image": "/champs/Belveth.png"
   },
   {
-    "id": "Blitzcrank", "name": "Blitzcrank", "image": "../../../public/champs/Blitzcrank.png"
+    "id": "Blitzcrank", "name": "Blitzcrank", "image": "/champs/Blitzcrank.png"
   },
   {
-    "id": "Brand", "name": "Brand", "image": "../../../public/champs/Brand.png"
+    "id": "Brand", "name": "Brand", "image": "/champs/Brand.png"
   },
   {
-    "id": "Braum", "name": "Braum", "image": "../../../public/champs/Braum.png"
+    "id": "Braum", "name": "Braum", "image": "/champs/Braum.png"
   },
   {
-    "id": "Briar", "name": "Briar", "image": "../../../public/champs/Briar.png"
+    "id": "Briar", "name": "Briar", "image": "/champs/Briar.png"
   },
   {
-    "id": "Caitlyn", "name": "Caitlyn", "image": "../../../public/champs/Caitlyn.png"
+    "id": "Caitlyn", "name": "Caitlyn", "image": "/champs/Caitlyn.png"
   },
   {
-    "id": "Camille", "name": "Camille", "image": "../../../public/champs/Camille.png"
+    "id": "Camille", "name": "Camille", "image": "/champs/Camille.png"
   },
   {
-    "id": "Cassiopeia", "name": "Cassiopeia", "image": "../../../public/champs/Cassiopeia.png"
+    "id": "Cassiopeia", "name": "Cassiopeia", "image": "/champs/Cassiopeia.png"
   },
   {
-    "id": "Chogath", "name": "Cho'Gath", "image": "../../../public/champs/Chogath.png"
+    "id": "Chogath", "name": "Cho'Gath", "image": "/champs/Chogath.png"
   },
   {
-    "id": "Corki", "name": "Corki", "image": "../../../public/champs/Corki.png"
+    "id": "Corki", "name": "Corki", "image": "/champs/Corki.png"
   },
   {
-    "id": "Darius", "name": "Darius", "image": "../../../public/champs/Darius.png"
+    "id": "Darius", "name": "Darius", "image": "/champs/Darius.png"
   },
   {
-    "id": "Diana", "name": "Diana", "image": "../../../public/champs/Diana.png"
+    "id": "Diana", "name": "Diana", "image": "/champs/Diana.png"
   },
   {
-    "id": "Dr. Mundo", "name": "Dr. Mundo", "image": "../../../public/champs/DrMundo.png"
+    "id": "Dr. Mundo", "name": "Dr. Mundo", "image": "/champs/DrMundo.png"
   },
   {
-    "id": "Draven", "name": "Draven", "image": "../../../public/champs/Draven.png"
+    "id": "Draven", "name": "Draven", "image": "/champs/Draven.png"
   },
   {
-    "id": "Ekko", "name": "Ekko", "image": "../../../public/champs/Ekko.png"
+    "id": "Ekko", "name": "Ekko", "image": "/champs/Ekko.png"
   },
   {
-    "id": "Elise", "name": "Elise", "image": "../../../public/champs/Elise.png"
+    "id": "Elise", "name": "Elise", "image": "/champs/Elise.png"
   },
   {
-    "id": "Evelynn", "name": "Evelynn", "image": "../../../public/champs/Evelynn.png"
+    "id": "Evelynn", "name": "Evelynn", "image": "/champs/Evelynn.png"
   },
   {
-    "id": "Ezreal", "name": "Ezreal", "image": "../../../public/champs/Ezreal.png"
+    "id": "Ezreal", "name": "Ezreal", "image": "/champs/Ezreal.png"
   },
   {
-    "id": "Fiddlesticks", "name": "Fiddlesticks", "image": "../../../public/champs/Fiddlesticks.png"
+    "id": "Fiddlesticks", "name": "Fiddlesticks", "image": "/champs/Fiddlesticks.png"
   },
   {
-    "id": "Fiora", "name": "Fiora", "image": "../../../public/champs/Fiora.png"
+    "id": "Fiora", "name": "Fiora", "image": "/champs/Fiora.png"
   },
   {
-    "id": "Fizz", "name": "Fizz", "image": "../../../public/champs/Fizz.png"
+    "id": "Fizz", "name": "Fizz", "image": "/champs/Fizz.png"
   },
   {
-    "id": "Galio", "name": "Galio", "image": "../../../public/champs/Galio.png"
+    "id": "Galio", "name": "Galio", "image": "/champs/Galio.png"
   },
   {
-    "id": "Gangplank", "name": "Gangplank", "image": "../../../public/champs/Gangplank.png"
+    "id": "Gangplank", "name": "Gangplank", "image": "/champs/Gangplank.png"
   },
   {
-    "id": "Garen", "name": "Garen", "image": "../../../public/champs/Garen.png"
+    "id": "Garen", "name": "Garen", "image": "/champs/Garen.png"
   },
   {
-    "id": "Gnar", "name": "Gnar", "image": "../../../public/champs/Gnar.png"
+    "id": "Gnar", "name": "Gnar", "image": "/champs/Gnar.png"
   },
   {
-    "id": "Gragas", "name": "Gragas", "image": "../../../public/champs/Gragas.png"
+    "id": "Gragas", "name": "Gragas", "image": "/champs/Gragas.png"
   },
   {
-    "id": "Graves", "name": "Graves", "image": "../../../public/champs/Graves.png"
+    "id": "Graves", "name": "Graves", "image": "/champs/Graves.png"
   },
   {
-    "id": "Gwen", "name": "Gwen", "image": "../../../public/champs/Gwen.png"
+    "id": "Gwen", "name": "Gwen", "image": "/champs/Gwen.png"
   },
   {
-    "id": "Hecarim", "name": "Hecarim", "image": "../../../public/champs/Hecarim.png"
+    "id": "Hecarim", "name": "Hecarim", "image": "/champs/Hecarim.png"
   },
   {
-    "id": "Heimerdinger", "name": "Heimerdinger", "image": "../../../public/champs/Heimerdinger.png"
+    "id": "Heimerdinger", "name": "Heimerdinger", "image": "/champs/Heimerdinger.png"
   },
   {
-    "id": "Hwei", "name": "Hwei", "image": "../../../public/champs/Hwei.png"
+    "id": "Hwei", "name": "Hwei", "image": "/champs/Hwei.png"
   },
   {
-    "id": "Illaoi", "name": "Illaoi", "image": "../../../public/champs/Illaoi.png"
+    "id": "Illaoi", "name": "Illaoi", "image": "/champs/Illaoi.png"
   },
   {
-    "id": "Irelia", "name": "Irelia", "image": "../../../public/champs/Irelia.png"
+    "id": "Irelia", "name": "Irelia", "image": "/champs/Irelia.png"
   },
   {
-    "id": "Ivern", "name": "Ivern", "image": "../../../public/champs/Ivern.png"
+    "id": "Ivern", "name": "Ivern", "image": "/champs/Ivern.png"
   },
   {
-    "id": "Janna", "name": "Janna", "image": "../../../public/champs/Janna.png"
+    "id": "Janna", "name": "Janna", "image": "/champs/Janna.png"
   },
   {
-    "id": "Jarvan IV", "name": "Jarvan IV", "image": "../../../public/champs/JarvanIV.png"
+    "id": "Jarvan IV", "name": "Jarvan IV", "image": "/champs/JarvanIV.png"
   },
   {
-    "id": "Jax", "name": "Jax", "image": "../../../public/champs/Jax.png"
+    "id": "Jax", "name": "Jax", "image": "/champs/Jax.png"
   },
   {
-    "id": "Jayce", "name": "Jayce", "image": "../../../public/champs/Jayce.png"
+    "id": "Jayce", "name": "Jayce", "image": "/champs/Jayce.png"
   },
   {
-    "id": "Jhin", "name": "Jhin", "image": "../../../public/champs/Jhin.png"
+    "id": "Jhin", "name": "Jhin", "image": "/champs/Jhin.png"
   },
   {
-    "id": "Jinx", "name": "Jinx", "image": "../../../public/champs/Jinx.png"
+    "id": "Jinx", "name": "Jinx", "image": "/champs/Jinx.png"
   },
   {
-    "id": "K'Sante", "name": "K'Sante", "image": "../../../public/champs/KSante.png"
+    "id": "K'Sante", "name": "K'Sante", "image": "/champs/KSante.png"
   },
   {
-    "id": "Kai'Sa", "name": "Kai'Sa", "image": "../../../public/champs/KaiSa.png"
+    "id": "Kai'Sa", "name": "Kai'Sa", "image": "/champs/KaiSa.png"
   },
   {
-    "id": "Kalista", "name": "Kalista", "image": "../../../public/champs/Kalista.png"
+    "id": "Kalista", "name": "Kalista", "image": "/champs/Kalista.png"
   },
   {
-    "id": "Karma", "name": "Karma", "image": "../../../public/champs/Karma.png"
+    "id": "Karma", "name": "Karma", "image": "/champs/Karma.png"
   },
   {
-    "id": "Karthus", "name": "Karthus", "image": "../../../public/champs/Karthus.png"
+    "id": "Karthus", "name": "Karthus", "image": "/champs/Karthus.png"
   },
   {
-    "id": "Kassadin", "name": "Kassadin", "image": "../../../public/champs/Kassadin.png"
+    "id": "Kassadin", "name": "Kassadin", "image": "/champs/Kassadin.png"
   },
   {
-    "id": "Katarina", "name": "Katarina", "image": "../../../public/champs/Katarina.png"
+    "id": "Katarina", "name": "Katarina", "image": "/champs/Katarina.png"
   },
   {
-    "id": "Kayle", "name": "Kayle", "image": "../../../public/champs/Kayle.png"
+    "id": "Kayle", "name": "Kayle", "image": "/champs/Kayle.png"
   },
   {
-    "id": "Kayn", "name": "Kayn", "image": "../../../public/champs/Kayn.png"
+    "id": "Kayn", "name": "Kayn", "image": "/champs/Kayn.png"
   },
   {
-    "id": "Kennen", "name": "Kennen", "image": "../../../public/champs/Kennen.png"
+    "id": "Kennen", "name": "Kennen", "image": "/champs/Kennen.png"
   },
   {
-    "id": "Khazix", "name": "Kha'Zix", "image": "../../../public/champs/Khazix.png"
+    "id": "Khazix", "name": "Kha'Zix", "image": "/champs/Khazix.png"
   },
   {
-    "id": "Kindred", "name": "Kindred", "image": "../../../public/champs/Kindred.png"
+    "id": "Kindred", "name": "Kindred", "image": "/champs/Kindred.png"
   },
   {
-    "id": "Kled", "name": "Kled", "image": "../../../public/champs/Kled.png"
+    "id": "Kled", "name": "Kled", "image": "/champs/Kled.png"
   },
   {
-    "id": "Kog'Maw", "name": "Kog'Maw", "image": "../../../public/champs/KogMaw.png"
+    "id": "Kog'Maw", "name": "Kog'Maw", "image": "/champs/KogMaw.png"
   },
   {
-    "id": "LeBlanc", "name": "LeBlanc", "image": "../../../public/champs/LeBlanc.png"
+    "id": "LeBlanc", "name": "LeBlanc", "image": "/champs/LeBlanc.png"
   },
   {
-    "id": "Lee Sin", "name": "Lee Sin", "image": "../../../public/champs/LeeSin.png"
+    "id": "Lee Sin", "name": "Lee Sin", "image": "/champs/LeeSin.png"
   },
   {
-    "id": "Leona", "name": "Leona", "image": "../../../public/champs/Leona.png"
+    "id": "Leona", "name": "Leona", "image": "/champs/Leona.png"
   },
   {
-    "id": "Lillia", "name": "Lillia", "image": "../../../public/champs/Lillia.png"
+    "id": "Lillia", "name": "Lillia", "image": "/champs/Lillia.png"
   },
   {
-    "id": "Lissandra", "name": "Lissandra", "image": "../../../public/champs/Lissandra.png"
+    "id": "Lissandra", "name": "Lissandra", "image": "/champs/Lissandra.png"
   },
   {
-    "id": "Lucian", "name": "Lucian", "image": "../../../public/champs/Lucian.png"
+    "id": "Lucian", "name": "Lucian", "image": "/champs/Lucian.png"
   },
   {
-    "id": "Lulu", "name": "Lulu", "image": "../../../public/champs/Lulu.png"
+    "id": "Lulu", "name": "Lulu", "image": "/champs/Lulu.png"
   },
   {
-    "id": "Lux", "name": "Lux", "image": "../../../public/champs/Lux.png"
+    "id": "Lux", "name": "Lux", "image": "/champs/Lux.png"
   },
   {
-    "id": "Malphite", "name": "Malphite", "image": "../../../public/champs/Malphite.png"
+    "id": "Malphite", "name": "Malphite", "image": "/champs/Malphite.png"
   },
   {
-    "id": "Malzahar", "name": "Malzahar", "image": "../../../public/champs/Malzahar.png"
+    "id": "Malzahar", "name": "Malzahar", "image": "/champs/Malzahar.png"
   },
   {
-    "id": "Maokai", "name": "Maokai", "image": "../../../public/champs/Maokai.png"
+    "id": "Maokai", "name": "Maokai", "image": "/champs/Maokai.png"
   },
   {
-    "id": "Master Yi", "name": "Master Yi", "image": "../../../public/champs/MasterYi.png"
+    "id": "Master Yi", "name": "Master Yi", "image": "/champs/MasterYi.png"
   },
   {
-    "id": "Mel", "name": "Mel", "image": "../../../public/champs/Mel.png"
+    "id": "Mel", "name": "Mel", "image": "/champs/Mel.png"
   },
   {
-    "id": "Milio", "name": "Milio", "image": "../../../public/champs/Milio.png"
+    "id": "Milio", "name": "Milio", "image": "/champs/Milio.png"
   },
   {
-    "id": "Miss Fortune", "name": "Miss Fortune", "image": "../../../public/champs/MissFortune.png"
+    "id": "Miss Fortune", "name": "Miss Fortune", "image": "/champs/MissFortune.png"
   },
   {
-    "id": "Mordekaiser", "name": "Mordekaiser", "image": "../../../public/champs/Mordekaiser.png"
+    "id": "Mordekaiser", "name": "Mordekaiser", "image": "/champs/Mordekaiser.png"
   },
   {
-    "id": "Morgana", "name": "Morgana", "image": "../../../public/champs/Morgana.png"
+    "id": "Morgana", "name": "Morgana", "image": "/champs/Morgana.png"
   },
   {
-    "id": "Naafiri", "name": "Naafiri", "image": "../../../public/champs/Naafiri.png"
+    "id": "Naafiri", "name": "Naafiri", "image": "/champs/Naafiri.png"
   },
   {
-    "id": "Nami", "name": "Nami", "image": "../../../public/champs/Nami.png"
+    "id": "Nami", "name": "Nami", "image": "/champs/Nami.png"
   },
   {
-    "id": "Nasus", "name": "Nasus", "image": "../../../public/champs/Nasus.png"
+    "id": "Nasus", "name": "Nasus", "image": "/champs/Nasus.png"
   },
   {
-    "id": "Nautilus", "name": "Nautilus", "image": "../../../public/champs/Nautilus.png"
+    "id": "Nautilus", "name": "Nautilus", "image": "/champs/Nautilus.png"
   },
   {
-    "id": "Neeko", "name": "Neeko", "image": "../../../public/champs/Neeko.png"
+    "id": "Neeko", "name": "Neeko", "image": "/champs/Neeko.png"
   },
   {
-    "id": "Nidalee", "name": "Nidalee", "image": "../../../public/champs/Nidalee.png"
+    "id": "Nidalee", "name": "Nidalee", "image": "/champs/Nidalee.png"
   },
   {
-  "id": "Nilah", "name": "Nilah", "image": "../../../public/champs/Nilah.png"
+  "id": "Nilah", "name": "Nilah", "image": "/champs/Nilah.png"
   },
   {
-    "id": "Nocturne", "name": "Nocturne", "image": "../../../public/champs/Nocturne.png"
+    "id": "Nocturne", "name": "Nocturne", "image": "/champs/Nocturne.png"
   },
   {
-    "id": "Nunu & Willump", "name": "Nunu & Willump", "image": "../../../public/champs/NunuWillump.png"
+    "id": "Nunu & Willump", "name": "Nunu & Willump", "image": "/champs/NunuWillump.png"
   },
   {
-    "id": "Olaf", "name": "Olaf", "image": "../../../public/champs/Olaf.png"
+    "id": "Olaf", "name": "Olaf", "image": "/champs/Olaf.png"
   },
   {
-    "id": "Orianna", "name": "Orianna", "image": "../../../public/champs/Orianna.png"
+    "id": "Orianna", "name": "Orianna", "image": "/champs/Orianna.png"
   },
   {
-    "id": "Ornn", "name": "Ornn", "image": "../../../public/champs/Ornn.png"
+    "id": "Ornn", "name": "Ornn", "image": "/champs/Ornn.png"
   },
   {
-    "id": "Pantheon", "name": "Pantheon", "image": "../../../public/champs/Pantheon.png"
+    "id": "Pantheon", "name": "Pantheon", "image": "/champs/Pantheon.png"
   },
   {
-    "id": "Poppy", "name": "Poppy", "image": "../../../public/champs/Poppy.png"
+    "id": "Poppy", "name": "Poppy", "image": "/champs/Poppy.png"
   },
   {
-    "id": "Pyke", "name": "Pyke", "image": "../../../public/champs/Pyke.png"
+    "id": "Pyke", "name": "Pyke", "image": "/champs/Pyke.png"
   },
   {
-    "id": "Qiyana", "name": "Qiyana", "image": "../../../public/champs/Qiyana.png"
+    "id": "Qiyana", "name": "Qiyana", "image": "/champs/Qiyana.png"
   },
   {
-    "id": "Quinn", "name": "Quinn", "image": "../../../public/champs/Quinn.png"
+    "id": "Quinn", "name": "Quinn", "image": "/champs/Quinn.png"
   },
   {
-    "id": "Rakan", "name": "Rakan", "image": "../../../public/champs/Rakan.png"
+    "id": "Rakan", "name": "Rakan", "image": "/champs/Rakan.png"
   },
   {
-    "id": "Rammus", "name": "Rammus", "image": "../../../public/champs/Rammus.png"
+    "id": "Rammus", "name": "Rammus", "image": "/champs/Rammus.png"
   },
   {
-    "id": "Rek'Sai", "name": "Rek'Sai", "image": "../../../public/champs/RekSai.png"
+    "id": "Rek'Sai", "name": "Rek'Sai", "image": "/champs/RekSai.png"
   },
   {
-    "id": "Rell", "name": "Rell", "image": "../../../public/champs/Rell.png"
+    "id": "Rell", "name": "Rell", "image": "/champs/Rell.png"
   },
   {
-    "id": "Renata Glask", "name": "Renata Glask", "image": "../../../public/champs/RenataGlask.png"
+    "id": "Renata Glask", "name": "Renata Glask", "image": "/champs/RenataGlask.png"
   },
   {
-    "id": "Renekton", "name": "Renekton", "image": "../../../public/champs/Renekton.png"
+    "id": "Renekton", "name": "Renekton", "image": "/champs/Renekton.png"
   },
   {
-    "id": "Rengar", "name": "Rengar", "image": "../../../public/champs/Rengar.png"
+    "id": "Rengar", "name": "Rengar", "image": "/champs/Rengar.png"
   },
   {
-    "id": "Riven", "name": "Riven", "image": "../../../public/champs/Riven.png"
+    "id": "Riven", "name": "Riven", "image": "/champs/Riven.png"
   },
   {
-    "id": "Rumble", "name": "Rumble", "image": "../../../public/champs/Rumble.png"
+    "id": "Rumble", "name": "Rumble", "image": "/champs/Rumble.png"
   },
   {
-    "id": "Ryze", "name": "Ryze", "image": "../../../public/champs/Ryze.png"
+    "id": "Ryze", "name": "Ryze", "image": "/champs/Ryze.png"
   },
   {
-    "id": "Samira", "name": "Samira", "image": "../../../public/champs/Samira.png"
+    "id": "Samira", "name": "Samira", "image": "/champs/Samira.png"
   },
   {
-    "id": "Sejuani", "name": "Sejuani", "image": "../../../public/champs/Sejuani.png"
+    "id": "Sejuani", "name": "Sejuani", "image": "/champs/Sejuani.png"
   },
   {
-    "id": "Senna", "name": "Senna", "image": "../../../public/champs/Senna.png"
+    "id": "Senna", "name": "Senna", "image": "/champs/Senna.png"
   },
   {
-    "id": "Seraphine", "name": "Seraphine", "image": "../../../public/champs/Seraphine.png"
+    "id": "Seraphine", "name": "Seraphine", "image": "/champs/Seraphine.png"
   },
   {
-    "id": "Sett", "name": "Sett", "image": "../../../public/champs/Sett.png"
+    "id": "Sett", "name": "Sett", "image": "/champs/Sett.png"
   },
   {
-    "id": "Shaco", "name": "Shaco", "image": "../../../public/champs/Shaco.png"
+    "id": "Shaco", "name": "Shaco", "image": "/champs/Shaco.png"
   },
   {
-    "id": "Shen", "name": "Shen", "image": "../../../public/champs/Shen.png"
+    "id": "Shen", "name": "Shen", "image": "/champs/Shen.png"
   },
   {
-    "id": "Shyvana", "name": "Shyvana", "image": "../../../public/champs/Shyvana.png"
+    "id": "Shyvana", "name": "Shyvana", "image": "/champs/Shyvana.png"
   },
   {
-    "id": "Singed", "name": "Singed", "image": "../../../public/champs/Singed.png"
+    "id": "Singed", "name": "Singed", "image": "/champs/Singed.png"
   },
   {
-    "id": "Sion", "name": "Sion", "image": "../../../public/champs/Sion.png"
+    "id": "Sion", "name": "Sion", "image": "/champs/Sion.png"
   },
   {
-    "id": "Sivir", "name": "Sivir", "image": "../../../public/champs/Sivir.png"
+    "id": "Sivir", "name": "Sivir", "image": "/champs/Sivir.png"
   },
   {
-    "id": "Skarner", "name": "Skarner", "image": "../../../public/champs/Skarner.png"
+    "id": "Skarner", "name": "Skarner", "image": "/champs/Skarner.png"
   },
   {
-    "id": "Smolder", "name": "Smolder", "image": "../../../public/champs/Smolder.png"
+    "id": "Smolder", "name": "Smolder", "image": "/champs/Smolder.png"
   },
   {
-    "id": "Sona", "name": "Sona", "image": "../../../public/champs/Sona.png"
+    "id": "Sona", "name": "Sona", "image": "/champs/Sona.png"
   },
   {
-    "id": "Soraka", "name": "Soraka", "image": "../../../public/champs/Soraka.png"
+    "id": "Soraka", "name": "Soraka", "image": "/champs/Soraka.png"
   },
   {
-    "id": "Swain", "name": "Swain", "image": "../../../public/champs/Swain.png"
+    "id": "Swain", "name": "Swain", "image": "/champs/Swain.png"
   },
   {
-    "id": "Sylas", "name": "Sylas", "image": "../../../public/champs/Sylas.png"
+    "id": "Sylas", "name": "Sylas", "image": "/champs/Sylas.png"
   },
   {
-    "id": "Syndra", "name": "Syndra", "image": "../../../public/champs/Syndra.png"
+    "id": "Syndra", "name": "Syndra", "image": "/champs/Syndra.png"
   },
   {
-    "id": "Tahm Kench", "name": "Tahm Kench", "image": "../../../public/champs/TahmKench.png"
+    "id": "Tahm Kench", "name": "Tahm Kench", "image": "/champs/TahmKench.png"
   },
   {
-    "id": "Taliyah", "name": "Taliyah", "image": "../../../public/champs/Taliyah.png"
+    "id": "Taliyah", "name": "Taliyah", "image": "/champs/Taliyah.png"
   },
   {
-    "id": "Talon", "name": "Talon", "image": "../../../public/champs/Talon.png"
+    "id": "Talon", "name": "Talon", "image": "/champs/Talon.png"
   },
   {
-    "id": "Taric", "name": "Taric", "image": "../../../public/champs/Taric.png"
+    "id": "Taric", "name": "Taric", "image": "/champs/Taric.png"
   },
   {
-    "id": "Teemo", "name": "Teemo", "image": "../../../public/champs/Teemo.png"
+    "id": "Teemo", "name": "Teemo", "image": "/champs/Teemo.png"
   },
   {
-    "id": "Thresh", "name": "Thresh", "image": "../../../public/champs/Thresh.png"
+    "id": "Thresh", "name": "Thresh", "image": "/champs/Thresh.png"
   },
   {
-    "id": "Tristana", "name": "Tristana", "image": "../../../public/champs/Tristana.png"
+    "id": "Tristana", "name": "Tristana", "image": "/champs/Tristana.png"
   },
   {
-    "id": "Trundle", "name": "Trundle", "image": "../../../public/champs/Trundle.png"
+    "id": "Trundle", "name": "Trundle", "image": "/champs/Trundle.png"
   },
   {
-    "id": "Tryndamere", "name": "Tryndamere", "image": "../../../public/champs/Tryndamere.png"
+    "id": "Tryndamere", "name": "Tryndamere", "image": "/champs/Tryndamere.png"
   },
   {
-    "id": "Twisted Fate", "name": "Twisted Fate", "image": "../../../public/champs/TwistedFate.png"
+    "id": "Twisted Fate", "name": "Twisted Fate", "image": "/champs/TwistedFate.png"
   },
   {
-    "id": "Twitch", "name": "Twitch", "image": "../../../public/champs/Twitch.png"
+    "id": "Twitch", "name": "Twitch", "image": "/champs/Twitch.png"
   },
   {
-    "id": "Udyr", "name": "Udyr", "image": "../../../public/champs/Udyr.png"
+    "id": "Udyr", "name": "Udyr", "image": "/champs/Udyr.png"
   },
   {
-    "id": "Urgot", "name": "Urgot", "image": "../../../public/champs/Urgot.png"
+    "id": "Urgot", "name": "Urgot", "image": "/champs/Urgot.png"
   },
   {
-    "id": "Varus", "name": "Varus", "image": "../../../public/champs/Varus.png"
+    "id": "Varus", "name": "Varus", "image": "/champs/Varus.png"
   },
   {
-    "id": "Vayne", "name": "Vayne", "image": "../../../public/champs/Vayne.png"
+    "id": "Vayne", "name": "Vayne", "image": "/champs/Vayne.png"
   },
   {
-    "id": "Veigar", "name": "Veigar", "image": "../../../public/champs/Veigar.png"
+    "id": "Veigar", "name": "Veigar", "image": "/champs/Veigar.png"
   },
   {
-    "id": "Vel'Koz", "name": "Vel'Koz", "image": "../../../public/champs/VelKoz.png"
+    "id": "Vel'Koz", "name": "Vel'Koz", "image": "/champs/VelKoz.png"
   },
   {
-    "id": "Vex", "name": "Vex", "image": "../../../public/champs/Vex.png"
+    "id": "Vex", "name": "Vex", "image": "/champs/Vex.png"
   },
   {
-    "id": "Viego", "name": "Viego", "image": "../../../public/champs/Viego.png"
+    "id": "Viego", "name": "Viego", "image": "/champs/Viego.png"
   },
   {
-    "id": "Viktor", "name": "Viktor", "image": "../../../public/champs/Viktor.png"
+    "id": "Viktor", "name": "Viktor", "image": "/champs/Viktor.png"
   },
   {
-    "id": "Vi", "name": "Vi", "image": "../../../public/champs/Vi.png"
+    "id": "Vi", "name": "Vi", "image": "/champs/Vi.png"
   },
   {
-    "id": "Vladimir", "name": "Vladimir", "image": "../../../public/champs/Vladimir.png"
+    "id": "Vladimir", "name": "Vladimir", "image": "/champs/Vladimir.png"
   },
   {
-    "id": "Volibear", "name": "Volibear", "image": "../../../public/champs/Volibear.png"
+    "id": "Volibear", "name": "Volibear", "image": "/champs/Volibear.png"
   },
   {
-    "id": "Warwick", "name": "Warwick", "image": "../../../public/champs/Warwick.png"
+    "id": "Warwick", "name": "Warwick", "image": "/champs/Warwick.png"
   },
   {
-    "id": "Wukong", "name": "Wukong", "image": "../../../public/champs/Wukong.png"
+    "id": "Wukong", "name": "Wukong", "image": "/champs/Wukong.png"
   },
   {
-    "id": "Xayah", "name": "Xayah", "image": "../../../public/champs/Xayah.png"
+    "id": "Xayah", "name": "Xayah", "image": "/champs/Xayah.png"
   },
   {
-    "id": "Xerath", "name": "Xerath", "image": "../../../public/champs/Xerath.png"
+    "id": "Xerath", "name": "Xerath", "image": "/champs/Xerath.png"
   },
   {
-    "id": "Xin Zhao", "name": "Xin Zhao", "image": "../../../public/champs/XinZhao.png"
+    "id": "Xin Zhao", "name": "Xin Zhao", "image": "/champs/XinZhao.png"
   },
   {
-    "id": "Yasuo", "name": "Yasuo", "image": "../../../public/champs/Yasuo.png"
+    "id": "Yasuo", "name": "Yasuo", "image": "/champs/Yasuo.png"
   },
   {
-    "id": "Yone", "name": "Yone", "image": "../../../public/champs/Yone.png"
+    "id": "Yone", "name": "Yone", "image": "/champs/Yone.png"
   },
   {
-    "id": "Yorick", "name": "Yorick", "image": "../../../public/champs/Yorick.png"
+    "id": "Yorick", "name": "Yorick", "image": "/champs/Yorick.png"
   },
   {
-    "id": "Yuumi", "name": "Yuumi", "image": "../../../public/champs/Yuumi.png"
+    "id": "Yuumi", "name": "Yuumi", "image": "/champs/Yuumi.png"
   },
   {
-    "id": "Zac", "name": "Zac", "image": "../../../public/champs/Zac.png"
+    "id": "Zac", "name": "Zac", "image": "/champs/Zac.png"
   },
   {
-    "id": "Zed", "name": "Zed", "image": "../../../public/champs/Zed.png"
+    "id": "Zed", "name": "Zed", "image": "/champs/Zed.png"
   },
   {
-    "id": "Zeri", "name": "Zeri", "image": "../../../public/champs/Zeri.png"
+    "id": "Zeri", "name": "Zeri", "image": "/champs/Zeri.png"
   },
   {
-    "id": "Ziggs", "name": "Ziggs", "image": "../../../public/champs/Ziggs.png"
+    "id": "Ziggs", "name": "Ziggs", "image": "/champs/Ziggs.png"
   },
   {
-    "id": "Zilean", "name": "Zilean", "image": "../../../public/champs/Zilean.png"
+    "id": "Zilean", "name": "Zilean", "image": "/champs/Zilean.png"
   },
   {
-    "id": "Zoe", "name": "Zoe", "image": "../../../public/champs/Zoe.png"
+    "id": "Zoe", "name": "Zoe", "image": "/champs/Zoe.png"
   },
   {
-    "id": "'Zyra'", "'name'":"Zyra'", "'image'":"../../../public/champs/Zyra.png"
+    "id": "'Zyra'", "'name'":"Zyra'", "'image'":"/champs/Zyra.png"
   }
 ]
