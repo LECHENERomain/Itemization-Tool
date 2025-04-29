@@ -4,7 +4,12 @@
 <mat-form-field class="example-full-width">
 <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onChampionSelected($event.option.value)">
   @for (champ of champions(); track champ.name){
-    <mat-option [value]="champ.name">{{champ.name}}</mat-option>
+    <mat-option [value]="champ.name">
+      <div class="champion-option">
+        <img src="{{champ.image}}" alt="{{champ.name}}" class="champion-image">
+        <span>{{champ.name}}</span>
+      </div>
+    </mat-option>
   }
 </mat-autocomplete>
   <mat-label>Select Champion</mat-label>
@@ -20,7 +25,7 @@
   <div class="team">
     <h3>Blue Team</h3>
     <ul>
-      @for (champ of blueTeam(); track champ) {
+      @for (champ of blueTeam(); track champ.name) {
         <li><img src="{{champ.image}}" alt="{{champ.name}}"></li>
       }
     </ul>
@@ -29,7 +34,7 @@
   <div class="team">
     <h3>Red Team</h3>
     <ul>
-      @for (champ of redTeam(); track champ) {
+      @for (champ of redTeam(); track champ.name) {
         <li><img src="{{champ.image}}"alt="{{champ.name}}"></li>
       }
     </ul>

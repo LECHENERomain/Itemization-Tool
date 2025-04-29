@@ -9,6 +9,8 @@ export class ChampionsService {
   http = inject(HttpClient);
   readonly #championsSignal = signal<Champion[]>([]);
   readonly champions = this.#championsSignal.asReadonly();
+  readonly blueTeam = signal<Champion[]>([]);
+  readonly redTeam = signal<Champion[]>([]);
 
   constructor() {
     this.http.get<Champion[]>('assets/champions.json').subscribe(data => {

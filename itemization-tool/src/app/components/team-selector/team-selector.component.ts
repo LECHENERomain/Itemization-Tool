@@ -28,6 +28,8 @@ export class TeamSelectorComponent {
 
   constructor(private championsService: ChampionsService){
     this.champions = championsService.champions;
+    this.blueTeam = championsService.blueTeam;
+    this.redTeam = championsService.redTeam;
     this.championInputControl.valueChanges.subscribe(name => {
 
       if (!name) return;
@@ -35,8 +37,8 @@ export class TeamSelectorComponent {
       const champ = this.champions().find(c => c.name === name);
       if (!champ) return;
 
-      const currentBlue = this.blueTeam();
-      const currentRed = this.redTeam();
+      const currentBlue = this.championsService.blueTeam();
+      const currentRed = this.championsService.redTeam();
 
       if (
         currentBlue.some(c => c.name === champ.name) ||
