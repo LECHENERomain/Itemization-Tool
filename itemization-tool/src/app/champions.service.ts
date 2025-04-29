@@ -8,7 +8,11 @@ import {Champion} from './champion';
 export class ChampionsService {
   http = inject(HttpClient);
   readonly #championsSignal = signal<Champion[]>([]);
-  champions = this.#championsSignal.asReadonly();
+  readonly champions = this.#championsSignal.asReadonly();
 
-  constructor() { }
+  constructor() {
+    this.http.get<Champion[]>('assets/champions.json').subscribe(data => {
+      this.#championsSignal.set(data);
+    });
+  }
 }

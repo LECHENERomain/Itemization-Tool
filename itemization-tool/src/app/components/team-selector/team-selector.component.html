@@ -2,16 +2,36 @@
 <p>Select your champions and the enemy champions here.</p>
 
 <mat-form-field class="example-full-width">
-  <mat-label>Select Champion</mat-label>
-  <input
-  type="text"
-  placeholder="Pick a champion"
-  matInput
-  [formControl]="championInputControl"
-  [matAutocomplete]="auto">
-</mat-form-field>
-<mat-autocomplete #auto="matAutocomplete">
+<mat-autocomplete #auto="matAutocomplete" (optionSelected)="onChampionSelected($event.option.value)">
   @for (champ of champions(); track champ.name){
     <mat-option [value]="champ.name">{{champ.name}}</mat-option>
   }
 </mat-autocomplete>
+  <mat-label>Select Champion</mat-label>
+  <input
+    type="text"
+    placeholder="Pick a champion"
+    matInput
+    [formControl]="championInputControl"
+    [matAutocomplete]="auto">
+</mat-form-field>
+
+<div class="team-selector">
+  <div class="team">
+    <h3>Blue Team</h3>
+    <ul>
+      @for (champ of blueTeam(); track champ) {
+        <li><img src="{{champ.image}}" alt="{{champ.name}}"></li>
+      }
+    </ul>
+  </div>
+
+  <div class="team">
+    <h3>Red Team</h3>
+    <ul>
+      @for (champ of redTeam(); track champ) {
+        <li><img src="{{champ.image}}"alt="{{champ.name}}"></li>
+      }
+    </ul>
+  </div>
+</div>

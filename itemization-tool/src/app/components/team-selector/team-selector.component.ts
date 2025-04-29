@@ -22,10 +22,58 @@ import {FormControl, ReactiveFormsModule} from '@angular/forms';
 })
 export class TeamSelectorComponent {
   champions = signal<Champion[]>([]).asReadonly();
+  blueTeam = signal<Champion[]>([]);
+  redTeam = signal<Champion[]>([]);
   championInputControl = new FormControl('');
 
   constructor(private championsService: ChampionsService){
     this.champions = championsService.champions;
+    this.championInputControl.valueChanges.subscribe(name => {
+
+      if (!name) return;
+
+      const champ = this.champions().find(c => c.name === name);
+      if (!champ) return;
+
+      const currentBlue = this.blueTeam();
+      const currentRed = this.redTeam();
+
+      if (
+        currentBlue.some(c => c.name === champ.name) ||
+        currentRed.some(c => c.name === champ.name)
+      ) {
+        return;
+      }
+      if (currentBlue.length < 5) {
+        this.blueTeam.set([...currentBlue, champ]);
+      } else if (currentRed.length < 5) {
+        this.redTeam.set([...currentRed, champ]);
+      }
+
+      this.championInputControl.setValue('');
+    });
+  }
+
+  onChampionSelected(name: string){
+    const champ = this.champions().find(c => c.name === name);
+    if (!champ) return;
+
+    const currentBlue = this.blueTeam();
+    const currentRed = this.redTeam();
+
+    if (
+      currentBlue.some(c => c.name === champ.name) ||
+      currentRed.some(c => c.name === champ.name)
+    ) {
+      return;
+    }
+    if (currentBlue.length < 5) {
+      this.blueTeam.set([...currentBlue, champ]);
+    } else if (currentRed.length < 5) {
+      this.redTeam.set([...currentRed, champ]);
+    }
+
+    this.championInputControl.setValue('');
   }
 
 }
