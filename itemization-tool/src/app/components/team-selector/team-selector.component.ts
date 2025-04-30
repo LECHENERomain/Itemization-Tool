@@ -1,4 +1,4 @@
-import {Component, effect, signal} from '@angular/core';
+import {AfterViewInit, Component, effect, ElementRef, input, signal, ViewChild} from '@angular/core';
 import {MatAutocompleteModule, MatOption} from '@angular/material/autocomplete';
 import { Champion } from '../../champion';
 import {ChampionsService} from '../../champions.service';
@@ -20,7 +20,8 @@ import {FormControl, ReactiveFormsModule} from '@angular/forms';
   templateUrl: './team-selector.component.html',
   styleUrls: ['./team-selector.component.scss']
 })
-export class TeamSelectorComponent {
+export class TeamSelectorComponent implements AfterViewInit {
+  @ViewChild('championInput') championInputRef?: ElementRef<HTMLInputElement>
   champions;
   blueTeam = signal<Champion[]>([]);
   redTeam = signal<Champion[]>([]);
@@ -59,6 +60,10 @@ export class TeamSelectorComponent {
       this.selectedSlot.set({team, index});
       this.championInputControl.setValue('');
       this.updateFilteredChampions('');
+
+      setTimeout(() => {
+        this.championInputRef?.nativeElement.focus();
+      });
     }
   }
 
@@ -111,6 +116,9 @@ export class TeamSelectorComponent {
 
     this.selectedSlot.set(null);
     this.championInputControl.setValue('');
+  }
+
+  ngAfterViewInit(): void {
   }
 
 }
