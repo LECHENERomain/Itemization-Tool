@@ -1,42 +1,56 @@
 <h2>Team Selector</h2>
 <p>Select your champions and the enemy champions here.</p>
 
-<mat-form-field class="example-full-width">
-<mat-autocomplete #auto="matAutocomplete" (optionSelected)="onChampionSelected($event.option.value)">
-  @for (champ of champions(); track champ.name){
-    <mat-option [value]="champ.name">
-      <div class="champion-option">
-        <img src="{{champ.image}}" alt="{{champ.name}}" class="champion-image">
-        <span>{{champ.name}}</span>
-      </div>
-    </mat-option>
-  }
-</mat-autocomplete>
-  <mat-label>Select Champion</mat-label>
-  <input
-    type="text"
-    placeholder="Pick a champion"
-    matInput
-    [formControl]="championInputControl"
-    [matAutocomplete]="auto">
-</mat-form-field>
-
 <div class="team-selector">
   <div class="team">
     <h3>Blue Team</h3>
-    <ul>
-      @for (champ of blueTeam(); track champ.name) {
-        <li><img src="{{champ.image}}" alt="{{champ.name}}"></li>
+    <div class="team-row">
+      @for (champ of blueTeam(); track $index) {
+        <div class="champion-slot" (click)="selectSlot('blue', $index)" [class.selected]="selectedSlot()?.team === 'blue' && selectedSlot()?.index === $index">
+          <img [src]="champ.image" [alt]="champ.name" class="champion-image">
+        </div>
       }
-    </ul>
+    </div>
   </div>
 
   <div class="team">
     <h3>Red Team</h3>
-    <ul>
-      @for (champ of redTeam(); track champ.name) {
-        <li><img src="{{champ.image}}"alt="{{champ.name}}"></li>
+    <div class="team-row">
+      @for (champ of redTeam(); track $index) {
+        <div class="champion-slot" (click)="selectSlot('red', $index)" [class.selected]="selectedSlot()?.team === 'red' && selectedSlot()?.index === $index">
+          <img [src]="champ.image" [alt]="champ.name" class="champion-image">
+        </div>
       }
-    </ul>
+    </div>
   </div>
 </div>
+
+@if (selectedSlot() !== null){
+  <div class="champion-input">
+    <mat-form-field appearance="fill">
+      <mat-label>Select Champion</mat-label>
+      <input
+      type="text"
+      matInput
+      placeholder="Pick a champion"
+      [formControl]="championInputControl"
+      [matAutocomplete]="auto">
+    </mat-form-field>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onChampionSelected($event.option.value)">
+
+      @if (filteredChampions()?.length === 0) {
+        <mat-option disabled>No champions available</mat-option>
+      }
+      @if (filteredChampions(); as champions){
+      @for (champ of champions; track champ.name){
+      @if (champ.name !== 'Null') {
+        <mat-option [value]="champ.name">
+          <img [src]="champ.image" [alt]="champ.name" class="champion-image">
+          <span>{{ champ.name }}</span>
+        </mat-option>
+        }
+          }
+      }
+    </mat-autocomplete>
+  </div>
+}

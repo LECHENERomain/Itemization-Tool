@@ -1,6 +1,7 @@
 import {inject, Injectable, signal} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Champion} from './champion';
+import {Champion, NULL_CHAMPION} from './champion';
+import {take} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +10,18 @@ export class ChampionsService {
   http = inject(HttpClient);
   readonly #championsSignal = signal<Champion[]>([]);
   readonly champions = this.#championsSignal.asReadonly();
-  readonly blueTeam = signal<Champion[]>([]);
-  readonly redTeam = signal<Champion[]>([]);
+  readonly blueTeam = signal<Champion[]>([NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION]);
+  readonly redTeam = signal<Champion[]>([NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION]);
 
   constructor() {
-    this.http.get<Champion[]>('assets/champions.json').subscribe(data => {
-      this.#championsSignal.set(data);
-    });
+    this.http.get<Champion[]>('assets/champions.json')
+      .pipe(take(1))
+      .subscribe(data => {
+        console.log('Champions data fetched:', data.length);
+        this.#championsSignal.set(data);
+      }, error => {
+        console.error("Failed to fetch champions.json:", error);
+        this.#championsSignal.set([]);
+      });
   }
 }
