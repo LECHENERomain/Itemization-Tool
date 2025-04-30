@@ -1,5 +1,8 @@
 [
   {
+    "id": "null", "name": "null", "image": "/champs/Null.png"
+  },
+  {
     "id": "Aatrox", "name": "Aatrox", "image": "/champs/Aatrox.png"
   },
   {
