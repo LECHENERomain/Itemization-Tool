@@ -17,7 +17,6 @@ export class ChampionsService {
     this.http.get<Champion[]>('assets/champions.json')
       .pipe(take(1))
       .subscribe(data => {
-        console.log('Champions data fetched:', data.length);
         this.#championsSignal.set(data);
       }, error => {
         console.error("Failed to fetch champions.json:", error);

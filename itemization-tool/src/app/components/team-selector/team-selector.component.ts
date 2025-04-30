@@ -35,7 +35,6 @@ export class TeamSelectorComponent {
 
     effect(() =>{
       const allChamps = this.champions();
-      console.log('Champions loaded, count:', allChamps.length);
       if (allChamps.length > 0) {
         this.updateFilteredChampions(this.championInputControl.value ?? '');
       } else {
