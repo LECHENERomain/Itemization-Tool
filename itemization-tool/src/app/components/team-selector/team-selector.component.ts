@@ -1,4 +1,14 @@
-import {AfterViewInit, Component, computed, effect, ElementRef, input, signal, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  computed,
+  effect,
+  ElementRef,
+  input,
+  signal,
+  ViewChild,
+  WritableSignal
+} from '@angular/core';
 import {MatAutocompleteModule, MatOption} from '@angular/material/autocomplete';
 import { Champion } from '../../champion';
 import {ChampionsService} from '../../champions.service';
@@ -28,12 +38,13 @@ export class TeamSelectorComponent implements AfterViewInit {
   championInputControl = new FormControl('');
   selectedSlot = signal<{ team: 'blue' | 'red', index: number } | null>(null);
   filteredChampions = signal<Champion[]>([]);
-  locked = signal(false);
+  locked: WritableSignal<boolean>;
 
   constructor(private championsService: ChampionsService){
     this.champions = championsService.champions;
     this.blueTeam = championsService.blueTeam;
     this.redTeam = championsService.redTeam;
+    this.locked = championsService.locked;
 
     effect(() =>{
       const allChamps = this.champions();
