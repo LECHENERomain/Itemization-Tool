@@ -35,8 +35,7 @@
         matInput
         placeholder="Pick a champion"
         [formControl]="championInputControl"
-        [matAutocomplete]="auto"
-        [disabled]="locked()">
+        [matAutocomplete]="auto">
     </mat-form-field>
       <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onChampionSelected($event.option.value)">
         @if(!locked()) {
@@ -46,7 +45,7 @@
           }
           @if (filteredChampions(); as champions){
             @for (champ of champions; track champ.name) {
-              @if (champ.name !== 'Null') {
+              @if (champ.name !== 'null') {
                 <mat-option [value]="champ.name">
                   <img [src]="champ.image" [alt]="champ.name" class="champion-image">
                   <span>{{ champ.name }}</span>

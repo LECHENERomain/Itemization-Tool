@@ -35,7 +35,7 @@ export class TeamSelectorComponent implements AfterViewInit {
   champions;
   blueTeam = signal<Champion[]>([]);
   redTeam = signal<Champion[]>([]);
-  championInputControl = new FormControl('');
+  championInputControl: FormControl;
   selectedSlot = signal<{ team: 'blue' | 'red', index: number } | null>(null);
   filteredChampions = signal<Champion[]>([]);
   locked: WritableSignal<boolean>;
@@ -45,6 +45,15 @@ export class TeamSelectorComponent implements AfterViewInit {
     this.blueTeam = championsService.blueTeam;
     this.redTeam = championsService.redTeam;
     this.locked = championsService.locked;
+    this.championInputControl = new FormControl({ value: '', disabled: this.locked()});
+
+    effect(() => {
+      if (this.locked()) {
+        this.championInputControl.disable({ emitEvent: false });
+      } else {
+        this.championInputControl.enable({ emitEvent: false });
+      }
+    });
 
     effect(() =>{
       const allChamps = this.champions();
@@ -96,7 +105,7 @@ export class TeamSelectorComponent implements AfterViewInit {
     const selectedNames = new Set([
       ...currentBlue.map(c => c.name),
       ...currentRed.map(c => c.name),
-      'Null'
+      'null'
     ]);
 
     const filtered = allChamps.filter(c =>{
@@ -104,7 +113,12 @@ export class TeamSelectorComponent implements AfterViewInit {
       if (!hasValidName){
         return false;
       }
-      return !selectedNames.has(c.name) && c.name.toLowerCase().includes(lowerInput);
+
+      const isSelectedOrNull = selectedNames.has(c.name);
+
+      const matchesInput = c.name.toLowerCase().includes(lowerInput);
+
+      return !isSelectedOrNull && matchesInput;
     });
     this.filteredChampions.set(filtered);
   }
@@ -117,7 +131,7 @@ export class TeamSelectorComponent implements AfterViewInit {
     if (!selected) return;
 
     const otherTeam = selected.team === 'blue' ? this.redTeam() : this.blueTeam();
-    if (otherTeam.some(c => c.name !== 'Null' && c.name === champ.name)) return;
+    if (otherTeam.some(c => c.name !== 'null' && c.name === champ.name)) return;
 
     if (selected.team === 'blue'){
       const newBlue = [...this.blueTeam()];
@@ -137,8 +151,8 @@ export class TeamSelectorComponent implements AfterViewInit {
   }
 
   isReadyToValidate = computed(() => {
-    return this.blueTeam().every(c => c.name !== 'Null') &&
-      this.redTeam().every(c => c.name !== ('Null'))
+    return this.blueTeam().every(c => c.name !== 'null') &&
+      this.redTeam().every(c => c.name !== ('null'))
   });
 
   toggleLock(){
