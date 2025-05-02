@@ -41,19 +41,19 @@
       <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onChampionSelected($event.option.value)">
         @if(!locked()) {
 
-      @if (filteredChampions()?.length === 0) {
-    <mat-option disabled>No champions available</mat-option>
-    }
-    @if (filteredChampions(); as champions){
-    @for (champ of champions; track champ.name) {
-      @if (champ.name !== 'Null') {
-        <mat-option [value]="champ.name">
-          <img [src]="champ.image" [alt]="champ.name" class="champion-image">
-          <span>{{ champ.name }}</span>
-        </mat-option>
-        }
+          @if (filteredChampions()?.length === 0) {
+            <mat-option disabled>No champions available</mat-option>
           }
-      }
+          @if (filteredChampions(); as champions){
+            @for (champ of champions; track champ.name) {
+              @if (champ.name !== 'Null') {
+                <mat-option [value]="champ.name">
+                  <img [src]="champ.image" [alt]="champ.name" class="champion-image">
+                  <span>{{ champ.name }}</span>
+                </mat-option>
+              }
+            }
+          }
         }
       </mat-autocomplete>
 
@@ -62,6 +62,6 @@
 
 @if (isReadyToValidate()){
   <button (click)="toggleLock()" class="validate-button">
-    {{ locked() ? 'Unlock choice' : 'Lock choice' }}
+    {{ locked() ? 'Make changes' : 'Lock draft' }}
   </button>
 }
