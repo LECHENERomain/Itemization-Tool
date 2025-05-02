@@ -5,7 +5,7 @@ export interface Champion {
 }
 
 export const NULL_CHAMPION: Champion = {
-  id: "Null",
-  name: "Null",
+  id: "null",
+  name: "null",
   image: "/champs/Null.png"
 }
