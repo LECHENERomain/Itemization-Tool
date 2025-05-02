@@ -13,6 +13,7 @@ export class ChampionsService {
   readonly blueTeam = signal<Champion[]>([NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION]);
   readonly redTeam = signal<Champion[]>([NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION, NULL_CHAMPION]);
   readonly locked = signal(false);
+  readonly choiceValidated = signal(false);
 
   constructor() {
     this.http.get<Champion[]>('assets/champions.json')

@@ -1,6 +1,6 @@
-import {Component, signal, WritableSignal} from '@angular/core';
+import {Component, computed, signal, WritableSignal} from '@angular/core';
 import {ChampionsService} from '../../champions.service';
-import {Champion} from '../../champion';
+import {Champion, NULL_CHAMPION} from '../../champion';
 import {ReactiveFormsModule, FormControl} from '@angular/forms';
 import {MatAutocomplete, MatAutocompleteModule, MatOption} from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -23,10 +23,13 @@ import {MatInput} from '@angular/material/input';
 export class ChampionPromptComponent {
   championControl = new FormControl('');
   selectedChampions = signal<Champion[]>([]);
+  selectedChampion = signal<Champion | null>(null);
   locked: WritableSignal<boolean>;
+  validatedChoice: WritableSignal<boolean>;
 
   constructor(private championsService: ChampionsService) {
     this.locked = championsService.locked;
+    this.validatedChoice = championsService.choiceValidated;
   }
 
   get teamChampions(): Champion[]{
@@ -36,7 +39,19 @@ export class ChampionPromptComponent {
   onChampionSelected(champ: string){
     const champion = this.teamChampions.find(c => c.name === champ);
     if(champion){
-      this.selectedChampions.set([champion]);
+      this.selectedChampion.set(champion);
+    } else {
+      this.selectedChampion.set(null);
     }
   }
+
+  isReadyToValidate = computed(() => {
+    return this.selectedChampion() !== null && this.selectedChampion() !== NULL_CHAMPION;
+  });
+
+  toggleValidation(){
+    this.validatedChoice.update(current => !current);
+  }
+
+  protected readonly NULL_CHAMPION = NULL_CHAMPION;
 }

@@ -1,28 +1,45 @@
 @if(locked()){
 <h2>Champion Prompt</h2>
 <p>Choose the champion you want to work on.</p>
+<div class="champion-prompt">
 
-<mat-form-field appearance="fill" class="champion-prompt-input">
-<mat-label>Select Champion</mat-label>
-<input
-type="text"
-matInput
-placeholder="Choose a champion"
-[formControl]="championControl"
-[matAutocomplete]="auto">
+  @if (!validatedChoice()) {
+    <mat-form-field appearance="fill" class="champion-prompt-input">
+      <mat-label>Select Champion</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Choose a champion"
+        [formControl]="championControl"
+        [matAutocomplete]="auto">
 
-<mat-autocomplete #auto="matAutocomplete" (optionSelected)="onChampionSelected($event.option.value)">
-@if (teamChampions.length === 0) {
-<mat-option disabled>No champions selected yet</mat-option>
-}
-@for (champ of teamChampions; track champ.name) {
-@if (champ.name !== 'Null') {
-  <mat-option [value]="champ.name">
-    <img [src]="champ.image" [alt]="champ.name" class="champion-image">
-    {{ champ.name }}
-  </mat-option>
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onChampionSelected($event.option.value)">
+        @if (teamChampions.length === 0) {
+          <mat-option disabled>No champions selected yet</mat-option>
+        }
+        @for (champ of teamChampions; track champ.name) {
+          @if (champ.name !== 'Null') {
+            <mat-option [value]="champ.name">
+              <img [src]="champ.image" [alt]="champ.name" class="champion-image">
+              {{ champ.name }}
+            </mat-option>
+          }
+        }
+      </mat-autocomplete>
+    </mat-form-field>
   }
+
+  @if (selectedChampion() !== null) {
+    <div class="champion-selected-infos">
+      <h3>{{selectedChampion()?.name}}</h3>
+      <img [src]="selectedChampion()?.image" [alt]="selectedChampion()?.name" class="champion-selected-image">
+    </div>
+
+    @if (isReadyToValidate()) {
+      <button (click)="toggleValidation()" class="validate-button">
+        {{ validatedChoice() ? 'Change your choice' : 'Validate your pick' }}
+      </button>
     }
-  </mat-autocomplete>
-  </mat-form-field>
+  }
+</div>
 }
