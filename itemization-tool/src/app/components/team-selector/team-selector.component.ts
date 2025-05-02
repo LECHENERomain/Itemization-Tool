@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, effect, ElementRef, input, signal, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, computed, effect, ElementRef, input, signal, ViewChild} from '@angular/core';
 import {MatAutocompleteModule, MatOption} from '@angular/material/autocomplete';
 import { Champion } from '../../champion';
 import {ChampionsService} from '../../champions.service';
@@ -28,6 +28,7 @@ export class TeamSelectorComponent implements AfterViewInit {
   championInputControl = new FormControl('');
   selectedSlot = signal<{ team: 'blue' | 'red', index: number } | null>(null);
   filteredChampions = signal<Champion[]>([]);
+  locked = signal(false);
 
   constructor(private championsService: ChampionsService){
     this.champions = championsService.champions;
@@ -51,6 +52,9 @@ export class TeamSelectorComponent implements AfterViewInit {
   }
 
   selectSlot(team: 'blue' | 'red', index: number) {
+    if (this.locked()){
+      return;
+    }
     const currentlySelected = this.selectedSlot();
     const isSameSlot = currentlySelected?.team === team && currentlySelected?.index === index;
 
@@ -119,6 +123,15 @@ export class TeamSelectorComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+  }
+
+  isReadyToValidate = computed(() => {
+    return this.blueTeam().every(c => c.name !== 'Null') &&
+      this.redTeam().every(c => c.name !== ('Null'))
+  });
+
+  toggleLock(){
+    this.locked.update(current => !current);
   }
 
 }

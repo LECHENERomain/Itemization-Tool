@@ -47,6 +47,16 @@
       justify-content: center;
       cursor: pointer;
       transition: border-color 0.2s;
+
+      &.locked {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+
+      &.selected {
+        outline: 2px solid #2196f3;
+        outline-offset: 2px;
+      }
       }
 
     .champion-slot.selected {
@@ -70,4 +80,10 @@
     display: flex;
     justify-content: center;
   }
+}
+
+.validate-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
 }

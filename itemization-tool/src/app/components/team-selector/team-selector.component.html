@@ -6,7 +6,7 @@
     <h3>Blue Team</h3>
     <div class="team-row">
       @for (champ of blueTeam(); track $index) {
-        <div class="champion-slot" (click)="selectSlot('blue', $index)" [class.selected]="selectedSlot()?.team === 'blue' && selectedSlot()?.index === $index">
+        <div class="champion-slot" (click)="selectSlot('blue', $index)" [class.selected]="selectedSlot()?.team === 'blue' && selectedSlot()?.index === $index" [class.locked]="locked()">
           <img [src]="champ.image" [alt]="champ.name" class="champion-image">
         </div>
       }
@@ -17,7 +17,7 @@
     <h3>Red Team</h3>
     <div class="team-row">
       @for (champ of redTeam(); track $index) {
-        <div class="champion-slot" (click)="selectSlot('red', $index)" [class.selected]="selectedSlot()?.team === 'red' && selectedSlot()?.index === $index">
+        <div class="champion-slot" (click)="selectSlot('red', $index)" [class.selected]="selectedSlot()?.team === 'red' && selectedSlot()?.index === $index" [class.locked]="locked()">
           <img [src]="champ.image" [alt]="champ.name" class="champion-image">
         </div>
       }
@@ -35,15 +35,17 @@
         matInput
         placeholder="Pick a champion"
         [formControl]="championInputControl"
-        [matAutocomplete]="auto">
+        [matAutocomplete]="auto"
+        [disabled]="locked()">
     </mat-form-field>
-    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onChampionSelected($event.option.value)">
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onChampionSelected($event.option.value)">
+        @if(!locked()) {
 
       @if (filteredChampions()?.length === 0) {
-        <mat-option disabled>No champions available</mat-option>
-      }
-      @if (filteredChampions(); as champions){
-      @for (champ of champions; track champ.name){
+    <mat-option disabled>No champions available</mat-option>
+    }
+    @if (filteredChampions(); as champions){
+    @for (champ of champions; track champ.name) {
       @if (champ.name !== 'Null') {
         <mat-option [value]="champ.name">
           <img [src]="champ.image" [alt]="champ.name" class="champion-image">
@@ -52,6 +54,14 @@
         }
           }
       }
-    </mat-autocomplete>
+        }
+      </mat-autocomplete>
+
   </div>
+}
+
+@if (isReadyToValidate()){
+  <button (click)="toggleLock()" class="validate-button">
+    {{ locked() ? 'Unlock choice' : 'Lock choice' }}
+  </button>
 }
