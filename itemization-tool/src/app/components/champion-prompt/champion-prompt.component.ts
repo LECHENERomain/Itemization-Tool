@@ -22,7 +22,6 @@ import {MatInput} from '@angular/material/input';
 })
 export class ChampionPromptComponent {
   championControl = new FormControl('');
-  selectedChampions = signal<Champion[]>([]);
   selectedChampion = signal<Champion | null>(null);
   locked: WritableSignal<boolean>;
   validatedChoice: WritableSignal<boolean>;
