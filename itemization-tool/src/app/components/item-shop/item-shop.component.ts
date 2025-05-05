@@ -3,6 +3,8 @@ import {ChampionsService} from '../../champions.service';
 import {ItemsService} from '../../items.service';
 import {Item} from '../../item';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
+import {toSignal} from '@angular/core/rxjs-interop';
+import {debounceTime, distinctUntilChanged} from 'rxjs';
 
 @Component({
   selector: 'app-item-shop',
@@ -19,8 +21,16 @@ export class ItemShopComponent {
   selectedItems = signal<(Item | null)[]>(Array(6).fill(null));
   allItems;
 
+  readonly searchQuery = toSignal(
+    this.searchControl.valueChanges.pipe(
+      debounceTime(300),
+      distinctUntilChanged()
+    ),
+    { initialValue: '' }
+  );
+
   filteredItems = computed(() => {
-    const query = this.searchControl.value?.toLowerCase() || '';
+    const query = this.searchQuery()?.toLowerCase() || '';
     return this.allItems().filter(item =>
     item.name.toLowerCase().includes(query)
     );
