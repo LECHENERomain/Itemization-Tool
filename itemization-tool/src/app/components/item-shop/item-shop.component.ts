@@ -16,7 +16,7 @@ export class ItemShopComponent {
   choiceValidated = signal(false);
   searchControl = new FormControl('');
   selectedSlot = signal<number | null>(null);
-  selectedItems = signal<Item[]>(Array(6).fill(null));
+  selectedItems = signal<(Item | null)[]>(Array(6).fill(null));
   allItems;
 
   filteredItems = computed(() => {
@@ -38,7 +38,7 @@ export class ItemShopComponent {
       updated[slot] = item;
       this.selectedItems.set(updated);
       this.selectedSlot.set(null);
-    } else{
+    } else {
       const updated = [...this.selectedItems()];
       const firstEmpty = updated.findIndex(i => i === null);
       if (firstEmpty !== -1){
@@ -49,9 +49,16 @@ export class ItemShopComponent {
   }
 
   onSlotClicked(index: number){
-    if (this.selectedSlot() === index){
+    const currentSlot = this.selectedSlot();
+    const items= [...this.selectedItems()];
+
+    if (currentSlot === index){
+      if (items[index]){
+        items[index] = null;
+        this.selectedItems.set(items);
+      }
       this.selectedSlot.set(null);
-    } else{
+    } else {
       this.selectedSlot.set(index);
     }
   }

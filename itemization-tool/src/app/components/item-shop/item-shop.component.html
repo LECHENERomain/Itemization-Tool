@@ -8,7 +8,7 @@
     @for (i of [0, 1, 2, 3, 4, 5]; track i){
       <div class="item-slot" (click)="onSlotClicked(i)" [class.selected]="selectedSlot() === i">
         @if (selectedItems()[i]){
-          <img [src]="selectedItems()[i].icon" [alt]="selectedItems()[i].name">
+          <img [src]="selectedItems()[i]?.icon" [alt]="selectedItems()[i]?.name">
         } @else{
         <div class="empty-slot">+</div>
         }
