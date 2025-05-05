@@ -40,7 +40,7 @@
       <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onChampionSelected($event.option.value)">
         @if(!locked()) {
 
-          @if (filteredChampions()?.length === 0) {
+          @if (filteredChampions().length === 0) {
             <mat-option disabled>No champions available</mat-option>
           }
           @if (filteredChampions(); as champions){
