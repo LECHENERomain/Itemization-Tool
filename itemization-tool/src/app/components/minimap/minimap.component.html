@@ -10,7 +10,7 @@
   </ng-container>
 
   <ng-container *ngFor="let champ of redTeam(); let i = index">
-    <div class="champ-icon blue" [ngStyle]="getPositionStyle(champPositions.red()[i])" (mousedown)="startDrag($event, 'red', i)">
+    <div class="champ-icon red" [ngStyle]="getPositionStyle(champPositions.red()[i])" (mousedown)="startDrag($event, 'red', i)">
       <img [src]="champ.image" [alt]="champ.name"/>
     </div>
   </ng-container>
