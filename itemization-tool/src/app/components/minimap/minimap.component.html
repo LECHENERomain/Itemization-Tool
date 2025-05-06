@@ -1,2 +1,25 @@
 <h2>Minimap</h2>
-<p>The minimap will be displayed here with champions on their roles.</p>
+
+<div class="minimap-container">
+  <img src="assets/map.jpg" alt="Map" class="map-image"/>
+
+  <ng-container *ngFor="let champ of blueTeam(); let i = index">
+    <div class="champ-icon blue" [ngStyle]="getPositionStyle(champPositions.blue()[i])" (mousedown)="startDrag($event, 'blue', i)">
+      <img [src]="champ.image" [alt]="champ.name"/>
+    </div>
+  </ng-container>
+
+  <ng-container *ngFor="let champ of redTeam(); let i = index">
+    <div class="champ-icon blue" [ngStyle]="getPositionStyle(champPositions.red()[i])" (mousedown)="startDrag($event, 'red', i)">
+      <img [src]="champ.image" [alt]="champ.name"/>
+    </div>
+  </ng-container>
+
+  <div *ngFor="let turret of turrets"
+       class="turret"
+       [ngStyle]="getPositionStyle(turret.position)"
+       [class.destroyed]="turret.destroyed"
+       (click)="toggleTurret(turret)">
+    🛡️
+  </div>
+</div>
