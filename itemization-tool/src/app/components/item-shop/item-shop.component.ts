@@ -44,9 +44,9 @@ export class ItemShopComponent {
       switch (type){
         case 'base':
           return from.length === 0;
-        case 'legendary':
-          return from.length > 0 && into.length > 0;
         case 'epic':
+          return from.length > 0 && into.length > 0;
+        case 'legendary':
           return from.length > 0 && into.length === 0;
         case 'all':
         default:
