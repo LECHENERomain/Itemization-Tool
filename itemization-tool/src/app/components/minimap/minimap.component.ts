@@ -31,10 +31,28 @@ export class MinimapComponent {
   };
 
   turrets: Turret[] = [
-    { position: { x: 50, y: 450 }, destroyed: false },
-    { position: { x: 100, y: 400 }, destroyed: false },
-    { position: { x: 450, y: 50 }, destroyed: false },
-    { position: { x: 400, y: 100 }, destroyed: false },
+    { position: { x: 70, y: 555 }, destroyed: false }, // Blue nexus turret 1
+    { position: { x: 90, y: 580 }, destroyed: false }, // Blue nexus turret 2
+    { position: { x: 45, y: 475 }, destroyed: false }, // Blue top T3
+    { position: { x: 60, y: 360 }, destroyed: false }, // Blue top T2
+    { position: { x: 35, y: 195 }, destroyed: false }, // Blue top T1
+    { position: { x: 160, y: 495 }, destroyed: false }, // Blue mid T3
+    { position: { x: 220, y: 445 }, destroyed: false }, // Blue mid T2
+    { position: { x: 255, y: 375 }, destroyed: false }, // Blue mid T1
+    { position: { x: 185, y: 605 }, destroyed: false }, // Blue bot T3
+    { position: { x: 305, y: 595 }, destroyed: false }, // Blue bot T2
+    { position: { x: 470, y: 615 }, destroyed: false }, // Blue bot T1
+    { position: { x: 560, y: 70 }, destroyed: false }, // Red nexus turret 1
+    { position: { x: 580, y: 95 }, destroyed: false }, // Red nexus turret 2
+    { position: { x: 465, y: 50 }, destroyed: false }, // Red top T3
+    { position: { x: 350, y: 60 }, destroyed: false }, // Red top T2
+    { position: { x: 185, y: 40 }, destroyed: false }, // Red top T1
+    { position: { x: 495, y: 165 }, destroyed: false }, // Red mid T3
+    { position: { x: 430, y: 205 }, destroyed: false }, // Red mid T2
+    { position: { x: 395, y: 280 }, destroyed: false }, // Red mid T1
+    { position: { x: 605, y: 185 }, destroyed: false }, // Red bot T3
+    { position: { x: 595, y: 290 }, destroyed: false }, // Red bot T2
+    { position: { x: 615, y: 460 }, destroyed: false } // Red bot T1
   ]
 
   constructor(private championService: ChampionsService){
@@ -42,8 +60,8 @@ export class MinimapComponent {
     this.redTeam = championService.redTeam;
 
     effect(() => {
-      this.champPositions.blue.set(this.blueTeam().map((_, i) => ({ x: 20, y: 420 - i * 40 })));
-      this.champPositions.red.set(this.redTeam().map((_, i) => ({ x: 460, y: 20 + i * 40 })));
+      this.champPositions.blue.set(this.blueTeam().map((_, i) => ({ x: 20 + i * 40, y: 635 })));
+      this.champPositions.red.set(this.redTeam().map((_, i) => ({ x: 450 + i * 40, y: 5 })));
     });
   }
 
