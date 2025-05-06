@@ -16,6 +16,13 @@
     }
   </div>
 
+  <div class="filter-buttons">
+    <button (click)="itemTypeFilter.set('all')" [class.active]="itemTypeFilter() === 'all'">All</button>
+    <button (click)="itemTypeFilter.set('base')" [class.active]="itemTypeFilter() === 'base'">Base</button>
+    <button (click)="itemTypeFilter.set('legendary')" [class.active]="itemTypeFilter() === 'legendary'">Legendary</button>
+    <button (click)="itemTypeFilter.set('epic')" [class.active]="itemTypeFilter() === 'epic'">Epic</button>
+  </div>
+
   <div class="item-grid">
     @for (item of filteredItems(); track item.id){
       <div class="item-card" (click)="onItemClicked(item)">

@@ -50,3 +50,23 @@
     }
   }
 }
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+
+  button {
+    padding: 0.5rem 1rem;
+    background: #eee;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &.active {
+      background: #007bff;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}

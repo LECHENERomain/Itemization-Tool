@@ -20,6 +20,7 @@ export class ItemShopComponent {
   selectedSlot = signal<number | null>(null);
   selectedItems = signal<(Item | null)[]>(Array(6).fill(null));
   allItems;
+  itemTypeFilter = signal<'all' | 'base' | 'legendary' | 'epic'>('all');
 
   readonly searchQuery = toSignal(
     this.searchControl.valueChanges.pipe(
@@ -31,9 +32,27 @@ export class ItemShopComponent {
 
   filteredItems = computed(() => {
     const query = this.searchQuery()?.toLowerCase() || '';
-    return this.allItems().filter(item =>
-    item.name.toLowerCase().includes(query)
-    );
+    const type = this.itemTypeFilter();
+
+    return this.allItems().filter(item => {
+      const matchesQuery = item.name.toLowerCase().includes(query);
+      if (!matchesQuery) return false;
+
+      const from = item.from ?? [];
+      const into = item.into ?? [];
+
+      switch (type){
+        case 'base':
+          return from.length === 0;
+        case 'legendary':
+          return from.length > 0 && into.length > 0;
+        case 'epic':
+          return from.length > 0 && into.length === 0;
+        case 'all':
+        default:
+          return true;
+      }
+    });
   });
 
   constructor(private championService: ChampionsService, itemService: ItemsService) {
