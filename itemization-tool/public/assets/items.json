@@ -1473,50 +1473,6 @@
         "Effect1Amount": "10"
       }
     },
-    "2015": {
-      "name": "Kircheis Shard",
-      "description": "<mainText><stats><attention>15</attention> Attack Damage</stats><br><br><passive>Jolt</passive><br><keyword>Energized Attacks</keyword> deal an additional <magicDamage>50 magic damage</magicDamage>.</mainText>",
-      "colloq": ";",
-      "plaintext": "Attack speed and a chargable magic hit",
-      "from": [
-        "1036"
-      ],
-      "inStore": false,
-      "into": [
-        "3095"
-      ],
-      "image": {
-        "full": "2015.png",
-        "sprite": "item0.png",
-        "group": "item",
-        "x": 432,
-        "y": 240,
-        "w": 48,
-        "h": 48
-      },
-      "gold": {
-        "base": 350,
-        "purchasable": false,
-        "total": 700,
-        "sell": 490
-      },
-      "tags": [
-        "Damage",
-        "OnHit"
-      ],
-      "maps": {
-        "11": false,
-        "12": false,
-        "21": false,
-        "22": false,
-        "30": false,
-        "33": false
-      },
-      "stats": {
-        "FlatPhysicalDamageMod": 15
-      },
-      "depth": 2
-    },
     "2019": {
       "name": "Steel Sigil",
       "description": "<mainText><stats><attention>15</attention> Attack Damage<br><attention>30</attention> Armor</stats><br><br></mainText>",
@@ -2757,49 +2713,6 @@
         "FlatMovementSpeedMod": 40
       },
       "depth": 2
-    },
-    "3011": {
-      "name": "Chemtech Putrifier",
-      "description": "<mainText><stats><attention>35</attention> Ability Power<br><attention>10%</attention> Heal and Shield Power<br><attention>75%</attention> Base Mana Regen<br><attention>15</attention> Ability Haste</stats><br><br><br><li><passive>Puffcap Toxin:</passive> Dealing damage applies <status>40% Grievous Wounds</status> to champions for 3 seconds.<br><br><rules><status>Grievous Wounds</status> reduces the effectiveness of Healing and Regeneration effects.</rules></mainText>",
-      "colloq": "",
-      "plaintext": "",
-      "from": [
-        "3916",
-        "3114"
-      ],
-      "inStore": false,
-      "image": {
-        "full": "3011.png",
-        "sprite": "item2.png",
-        "group": "item",
-        "x": 96,
-        "y": 288,
-        "w": 48,
-        "h": 48
-      },
-      "gold": {
-        "base": 500,
-        "purchasable": false,
-        "total": 1900,
-        "sell": 1330
-      },
-      "tags": [
-        "SpellDamage",
-        "ManaRegen",
-        "AbilityHaste"
-      ],
-      "maps": {
-        "11": true,
-        "12": true,
-        "21": true,
-        "22": false,
-        "30": false,
-        "33": false
-      },
-      "stats": {
-        "FlatMagicDamageMod": 35
-      },
-      "depth": 3
     },
     "3013": {
       "name": "Synchronized Souls",
@@ -5299,56 +5212,6 @@
       },
       "depth": 3
     },
-    "3117": {
-      "name": "Mobility Boots",
-      "description": "<mainText><stats></stats><br><br><attention>25</attention> Move Speed <br>When out of combat for at least 5 seconds, increase this item's effect to <attention>45</attention>.</mainText>",
-      "colloq": ";",
-      "plaintext": "Greatly enhances Move Speed when out of combat",
-      "from": [
-        "1001"
-      ],
-      "inStore": false,
-      "image": {
-        "full": "3117.png",
-        "sprite": "item3.png",
-        "group": "item",
-        "x": 48,
-        "y": 96,
-        "w": 48,
-        "h": 48
-      },
-      "gold": {
-        "base": 700,
-        "purchasable": false,
-        "total": 1000,
-        "sell": 700
-      },
-      "tags": [
-        "Boots"
-      ],
-      "maps": {
-        "11": true,
-        "12": true,
-        "21": true,
-        "22": false,
-        "30": false,
-        "33": false
-      },
-      "stats": {
-        "FlatMovementSpeedMod": 45
-      },
-      "effect": {
-        "Effect1Amount": "0",
-        "Effect2Amount": "0",
-        "Effect3Amount": "0",
-        "Effect4Amount": "0",
-        "Effect5Amount": "0",
-        "Effect6Amount": "0",
-        "Effect7Amount": "0",
-        "Effect8Amount": "25"
-      },
-      "depth": 2
-    },
     "3118": {
       "name": "Malignance",
       "description": "<mainText><stats><attention>85</attention> Ability Power<br><attention>600</attention> Mana<br><attention>15</attention> Ability Haste</stats><br><br><passive>Scorn</passive><br>Gain 20 Ultimate Ability Haste.<br><br><passive>Hatefog</passive><br>Damaging a champion with your Ultimate burns the ground beneath them for 3s, dealing <magicDamage>magic damage</magicDamage> per second and reducing their <scaleMR>Magic Resist</scaleMR>. <br></mainText>",
@@ -6902,53 +6765,6 @@
         "FlatSpellBlockMod": 25,
         "FlatHPPoolMod": 200,
         "FlatArmorMod": 25
-      },
-      "depth": 3
-    },
-    "3193": {
-      "name": "Gargoyle Stoneplate",
-      "description": "<mainText><stats><attention>60</attention> Armor<br><attention>60</attention> Magic Resist<br><attention>15</attention> Ability Haste</stats><br><br><br><li><passive>Fortify:</passive> Taking damage from a champion grants a stack of <scaleArmor> Armor</scaleArmor> and <scaleMR> Magic Resist</scaleMR> for 6 seconds.<br><br><rules>Max 5 stacks; 1 per champion.</rules><br><br><active>Active -</active> <active>Unbreakable:</active> Gain a Shield that decays and grow in size.</mainText>",
-      "colloq": ";",
-      "plaintext": "Greatly increases defense near multiple enemies.",
-      "from": [
-        "1029",
-        "3105",
-        "1033"
-      ],
-      "inStore": false,
-      "image": {
-        "full": "3193.png",
-        "sprite": "item3.png",
-        "group": "item",
-        "x": 48,
-        "y": 288,
-        "w": 48,
-        "h": 48
-      },
-      "gold": {
-        "base": 1350,
-        "purchasable": false,
-        "total": 3150,
-        "sell": 2205
-      },
-      "tags": [
-        "SpellBlock",
-        "Armor",
-        "Active",
-        "CooldownReduction",
-        "AbilityHaste"
-      ],
-      "maps": {
-        "11": false,
-        "12": false,
-        "21": false,
-        "22": false,
-        "30": false,
-        "33": false
-      },
-      "stats": {
-        "FlatSpellBlockMod": 60,
-        "FlatArmorMod": 60
       },
       "depth": 3
     },
