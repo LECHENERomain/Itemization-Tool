@@ -7,7 +7,7 @@ import {MinimapComponent} from './components/minimap/minimap.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TeamSelectorComponent, ChampionPromptComponent, ItemShopComponent, MinimapComponent],
+  imports: [TeamSelectorComponent, ChampionPromptComponent, ItemShopComponent, MinimapComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
