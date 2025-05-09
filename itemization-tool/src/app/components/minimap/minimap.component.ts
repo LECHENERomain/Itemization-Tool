@@ -84,28 +84,28 @@ export class MinimapComponent implements AfterViewInit, OnDestroy {
   };
 
   turrets: Turret[] = [
-    {position: {x: 70, y: 555}, destroyed: false}, // Blue nexus turret 1
-    {position: {x: 90, y: 580}, destroyed: false}, // Blue nexus turret 2
-    {position: {x: 45, y: 475}, destroyed: false}, // Blue top T3
-    {position: {x: 60, y: 360}, destroyed: false}, // Blue top T2
-    {position: {x: 35, y: 195}, destroyed: false}, // Blue top T1
-    {position: {x: 160, y: 495}, destroyed: false}, // Blue mid T3
-    {position: {x: 220, y: 445}, destroyed: false}, // Blue mid T2
-    {position: {x: 255, y: 375}, destroyed: false}, // Blue mid T1
-    {position: {x: 185, y: 605}, destroyed: false}, // Blue bot T3
-    {position: {x: 305, y: 595}, destroyed: false}, // Blue bot T2
-    {position: {x: 470, y: 615}, destroyed: false}, // Blue bot T1
-    {position: {x: 560, y: 70}, destroyed: false}, // Red nexus turret 1
-    {position: {x: 580, y: 95}, destroyed: false}, // Red nexus turret 2
-    {position: {x: 465, y: 50}, destroyed: false}, // Red top T3
-    {position: {x: 350, y: 60}, destroyed: false}, // Red top T2
-    {position: {x: 185, y: 40}, destroyed: false}, // Red top T1
-    {position: {x: 495, y: 165}, destroyed: false}, // Red mid T3
-    {position: {x: 430, y: 205}, destroyed: false}, // Red mid T2
-    {position: {x: 395, y: 280}, destroyed: false}, // Red mid T1
-    {position: {x: 605, y: 185}, destroyed: false}, // Red bot T3
-    {position: {x: 595, y: 290}, destroyed: false}, // Red bot T2
-    {position: {x: 615, y: 460}, destroyed: false} // Red bot T1
+    {position: {x: 65, y: 535}, destroyed: false}, // Blue nexus turret 1
+    {position: {x: 85, y: 560}, destroyed: false}, // Blue nexus turret 2
+    {position: {x: 40, y: 450}, destroyed: false}, // Blue top T3
+    {position: {x: 55, y: 345}, destroyed: false}, // Blue top T2
+    {position: {x: 35, y: 180}, destroyed: false}, // Blue top T1
+    {position: {x: 155, y: 475}, destroyed: false}, // Blue mid T3
+    {position: {x: 210, y: 425}, destroyed: false}, // Blue mid T2
+    {position: {x: 245, y: 355}, destroyed: false}, // Blue mid T1
+    {position: {x: 180, y: 585}, destroyed: false}, // Blue bot T3
+    {position: {x: 290, y: 570}, destroyed: false}, // Blue bot T2
+    {position: {x: 445, y: 590}, destroyed: false}, // Blue bot T1
+    {position: {x: 535, y: 70}, destroyed: false}, // Red nexus turret 1
+    {position: {x: 555, y: 85}, destroyed: false}, // Red nexus turret 2
+    {position: {x: 445, y: 45}, destroyed: false}, // Red top T3
+    {position: {x: 335, y: 50}, destroyed: false}, // Red top T2
+    {position: {x: 180, y: 35}, destroyed: false}, // Red top T1
+    {position: {x: 470, y: 150}, destroyed: false}, // Red mid T3
+    {position: {x: 415, y: 195}, destroyed: false}, // Red mid T2
+    {position: {x: 375, y: 265}, destroyed: false}, // Red mid T1
+    {position: {x: 580, y: 180}, destroyed: false}, // Red bot T3
+    {position: {x: 565, y: 280}, destroyed: false}, // Red bot T2
+    {position: {x: 590, y: 440}, destroyed: false} // Red bot T1
   ]
 
   constructor(private championService: ChampionsService) {
