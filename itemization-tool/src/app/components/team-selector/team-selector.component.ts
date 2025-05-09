@@ -4,7 +4,6 @@ import {
   computed,
   effect,
   ElementRef,
-  input,
   signal,
   ViewChild,
   WritableSignal
