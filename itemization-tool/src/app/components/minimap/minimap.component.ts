@@ -1,7 +1,8 @@
-import {Component, effect, signal} from '@angular/core';
+import {Component, effect, signal, AfterViewInit, ElementRef, ViewChild, OnDestroy } from '@angular/core';
 import {ChampionsService} from '../../champions.service';
 import {Champion} from '../../champion';
 import { CommonModule } from '@angular/common';
+import * as fabric from 'fabric';
 
 interface Position{
   x: number;
@@ -21,9 +22,71 @@ interface Turret{
   templateUrl: './minimap.component.html',
   styleUrl: './minimap.component.scss'
 })
-export class MinimapComponent {
+export class MinimapComponent implements AfterViewInit, OnDestroy {
+  @ViewChild('drawingCanvas') drawingCanvas!: ElementRef<HTMLCanvasElement>
+  private canvas!: fabric.Canvas;
   blueTeam = signal<Champion[]>([]);
   redTeam = signal<Champion[]>([]);
+
+  ngAfterViewInit() {
+    console.log("ngAfterViewInit called");
+    if (this.drawingCanvas?.nativeElement) {
+      console.log("Canvas element found");
+      this.canvas = new fabric.Canvas(this.drawingCanvas.nativeElement, {
+        isDrawingMode: false,
+        backgroundColor: '',
+      });
+
+      this.canvas.freeDrawingBrush = new fabric.PencilBrush(this.canvas);
+      this.canvas.freeDrawingBrush!.width = 2;
+      this.canvas.freeDrawingBrush!.color = 'red';
+
+      this.selectTool('pan');
+    } else{
+      console.error("Canvas element not found");
+    }
+  }
+
+  selectTool(tool: 'draw' | 'erase' | 'clear' | 'pan'): void {
+
+    if (!this.canvas || !this.drawingCanvas?.nativeElement){
+      console.error("MinimapComponent: Canvas or canvas element not initialized");
+      return;
+    }
+
+    const canvasEl = this.drawingCanvas.nativeElement;
+
+    if (!this.canvas.freeDrawingBrush) {
+      this.canvas.freeDrawingBrush = new fabric.PencilBrush(this.canvas);
+    }
+
+    if (tool === 'draw'){
+      console.log("drawing mode");
+      this.canvas.isDrawingMode = true;
+      const pen = new fabric.PencilBrush(this.canvas);
+      pen.color = 'red';
+      pen.width = 2;
+      this.canvas.freeDrawingBrush = pen;
+    } else if (tool === 'erase'){
+      console.log("erasing mode");
+      this.canvas.isDrawingMode = true;
+      const eraser = new fabric.PencilBrush(this.canvas);
+      eraser.color = 'white';
+      eraser.width = 10;
+      this.canvas.freeDrawingBrush = eraser;
+    } else if (tool === 'clear'){
+      console.log("clearing canvas");
+      this.canvas.clear();
+      this.canvas.isDrawingMode = false;
+      canvasEl.style.pointerEvents = 'none';
+    } else if (tool === 'pan'){
+      console.log("panning mode");
+      this.canvas.isDrawingMode = false;
+      canvasEl.style.pointerEvents = 'none';
+    }
+
+    this.canvas.renderAll();
+  }
 
   champPositions = {
     blue: signal<Position[]>([]),
@@ -73,21 +136,41 @@ export class MinimapComponent {
   }
 
   toggleTurret(turret: Turret): void{
+    if (this.drawingCanvas?.nativeElement.style.pointerEvents === 'auto') {
+      return;
+    }
     turret.destroyed = !turret.destroyed;
   }
 
   dragging: { team: 'blue' | 'red'; index: number } | null = null;
 
   startDrag(event: MouseEvent, team: 'blue' | 'red', index: number): void{
+
+    if (this.drawingCanvas?.nativeElement.style.pointerEvents === 'auto') {
+      return;
+    }
+
     event.preventDefault();
     this.dragging = { team, index };
 
     const move = (e: MouseEvent) =>{
       if (!this.dragging) return;
 
-      const rect = (event.target as HTMLElement).closest('.minimap-container')!.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      const minimapContainer = (event.target as HTMLElement).closest('.minimap-container');
+      if (!minimapContainer) return;
+
+      const rect = minimapContainer.getBoundingClientRect();
+
+      let x = e.clientX - rect.left;
+      let y = e.clientY - rect.top;
+
+      const canvasWidth = 650;
+      const canvasHeight = 650;
+      const iconWidth = 48;
+      const iconHeight = 48;
+
+      x = Math.max(0, Math.min(x - iconWidth / 2, canvasWidth - iconWidth));
+      y = Math.max(0, Math.min(y - iconHeight / 2, canvasHeight - iconHeight));
 
       const positions = [...this.champPositions[team]()];
       positions[index] = { x, y };
@@ -102,6 +185,10 @@ export class MinimapComponent {
 
     window.addEventListener('mousemove', move);
     window.addEventListener('mouseup', stop);
+  }
+
+  ngOnDestroy(){
+    if (this.canvas) this.canvas.dispose();
   }
 
 }
