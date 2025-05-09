@@ -61,19 +61,16 @@ export class MinimapComponent implements AfterViewInit, OnDestroy {
     }
 
     if (tool === 'draw'){
-      console.log("drawing mode");
       this.canvas.isDrawingMode = true;
       const pen = new fabric.PencilBrush(this.canvas);
       pen.color = 'red';
       pen.width = 2;
       this.canvas.freeDrawingBrush = pen;
     }else if (tool === 'clear'){
-      console.log("clearing canvas");
       this.canvas.clear();
       this.canvas.isDrawingMode = false;
       this.selectTool('pan');
     } else if (tool === 'pan'){
-      console.log("panning mode");
       this.canvas.isDrawingMode = false;
       canvasEl.style.pointerEvents = 'none';
     }
