@@ -10,11 +10,11 @@ import {
   WritableSignal
 } from '@angular/core';
 import {MatAutocompleteModule, MatOption} from '@angular/material/autocomplete';
-import { Champion } from '../../champion';
+import {Champion} from '../../champion';
 import {ChampionsService} from '../../champions.service';
 
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
@@ -40,22 +40,22 @@ export class TeamSelectorComponent implements AfterViewInit {
   filteredChampions = signal<Champion[]>([]);
   locked: WritableSignal<boolean>;
 
-  constructor(private championsService: ChampionsService){
+  constructor(private championsService: ChampionsService) {
     this.champions = championsService.champions;
     this.blueTeam = championsService.blueTeam;
     this.redTeam = championsService.redTeam;
     this.locked = championsService.locked;
-    this.championInputControl = new FormControl({ value: '', disabled: this.locked()});
+    this.championInputControl = new FormControl({value: '', disabled: this.locked()});
 
     effect(() => {
       if (this.locked()) {
-        this.championInputControl.disable({ emitEvent: false });
+        this.championInputControl.disable({emitEvent: false});
       } else {
-        this.championInputControl.enable({ emitEvent: false });
+        this.championInputControl.enable({emitEvent: false});
       }
     });
 
-    effect(() =>{
+    effect(() => {
       const allChamps = this.champions();
       if (allChamps.length > 0) {
         this.updateFilteredChampions(this.championInputControl.value ?? '');
@@ -64,7 +64,7 @@ export class TeamSelectorComponent implements AfterViewInit {
       }
     });
 
-    this.championInputControl.valueChanges.subscribe(name=>{
+    this.championInputControl.valueChanges.subscribe(name => {
       if (typeof name !== 'string') return;
 
       this.updateFilteredChampions(name);
@@ -72,13 +72,13 @@ export class TeamSelectorComponent implements AfterViewInit {
   }
 
   selectSlot(team: 'blue' | 'red', index: number) {
-    if (this.locked()){
+    if (this.locked()) {
       return;
     }
     const currentlySelected = this.selectedSlot();
     const isSameSlot = currentlySelected?.team === team && currentlySelected?.index === index;
 
-    if (isSameSlot){
+    if (isSameSlot) {
       this.selectedSlot.set(null);
     } else {
       this.selectedSlot.set({team, index});
@@ -91,7 +91,7 @@ export class TeamSelectorComponent implements AfterViewInit {
     }
   }
 
-  updateFilteredChampions(input: string){
+  updateFilteredChampions(input: string) {
     const allChamps = this.champions();
 
     if (allChamps.length === 0) {
@@ -108,9 +108,9 @@ export class TeamSelectorComponent implements AfterViewInit {
       'null'
     ]);
 
-    const filtered = allChamps.filter(c =>{
+    const filtered = allChamps.filter(c => {
       const hasValidName = typeof c.name === 'string' && c.name.length > 0;
-      if (!hasValidName){
+      if (!hasValidName) {
         return false;
       }
 
@@ -123,7 +123,7 @@ export class TeamSelectorComponent implements AfterViewInit {
     this.filteredChampions.set(filtered);
   }
 
-  onChampionSelected(name: string){
+  onChampionSelected(name: string) {
     const champ = this.champions().find(c => c.name === name);
     if (!champ) return;
 
@@ -133,7 +133,7 @@ export class TeamSelectorComponent implements AfterViewInit {
     const otherTeam = selected.team === 'blue' ? this.redTeam() : this.blueTeam();
     if (otherTeam.some(c => c.name !== 'null' && c.name === champ.name)) return;
 
-    if (selected.team === 'blue'){
+    if (selected.team === 'blue') {
       const newBlue = [...this.blueTeam()];
       newBlue[selected.index] = champ;
       this.blueTeam.set(newBlue);
@@ -155,7 +155,7 @@ export class TeamSelectorComponent implements AfterViewInit {
       this.redTeam().every(c => c.name !== ('null'))
   });
 
-  toggleLock(){
+  toggleLock() {
     this.locked.update(current => !current);
   }
 

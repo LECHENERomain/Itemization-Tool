@@ -82,9 +82,11 @@ button {
   border: 1px solid #ccc;
   background-color: #f0f0f0;
   border-radius: 4px;
+
   &:hover {
     background-color: #e0e0e0;
   }
+
   &:active {
     background-color: #d0d0d0;
   }

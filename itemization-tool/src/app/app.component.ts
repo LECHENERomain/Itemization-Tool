@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
 import {TeamSelectorComponent} from './components/team-selector/team-selector.component';
 import {ChampionPromptComponent} from './components/champion-prompt/champion-prompt.component';
 import {ItemShopComponent} from './components/item-shop/item-shop.component';

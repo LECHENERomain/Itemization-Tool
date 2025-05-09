@@ -3,7 +3,7 @@ import {ChampionsService} from '../../champions.service';
 import {Champion, NULL_CHAMPION} from '../../champion';
 import {ReactiveFormsModule, FormControl} from '@angular/forms';
 import {MatAutocomplete, MatAutocompleteModule, MatOption} from '@angular/material/autocomplete';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInput} from '@angular/material/input';
 
 
@@ -31,13 +31,13 @@ export class ChampionPromptComponent {
     this.validatedChoice = championsService.choiceValidated;
   }
 
-  get teamChampions(): Champion[]{
+  get teamChampions(): Champion[] {
     return [...this.championsService.blueTeam(), ...this.championsService.redTeam()];
   }
 
-  onChampionSelected(champ: string){
+  onChampionSelected(champ: string) {
     const champion = this.teamChampions.find(c => c.name === champ);
-    if(champion){
+    if (champion) {
       this.selectedChampion.set(champion);
     } else {
       this.selectedChampion.set(null);
@@ -48,7 +48,7 @@ export class ChampionPromptComponent {
     return this.selectedChampion() !== null && this.selectedChampion() !== NULL_CHAMPION;
   });
 
-  toggleValidation(){
+  toggleValidation() {
     this.validatedChoice.update(current => !current);
   }
 

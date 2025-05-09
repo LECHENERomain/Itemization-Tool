@@ -27,7 +27,7 @@ export class ItemShopComponent {
       debounceTime(300),
       distinctUntilChanged()
     ),
-    { initialValue: '' }
+    {initialValue: ''}
   );
 
   filteredItems = computed(() => {
@@ -41,7 +41,7 @@ export class ItemShopComponent {
       const from = item.from ?? [];
       const into = item.into ?? [];
 
-      switch (type){
+      switch (type) {
         case 'base':
           return from.length === 0;
         case 'epic':
@@ -60,9 +60,9 @@ export class ItemShopComponent {
     this.allItems = itemService.items;
   }
 
-  onItemClicked(item: Item){
+  onItemClicked(item: Item) {
     const slot = this.selectedSlot();
-    if (slot !== null){
+    if (slot !== null) {
       const updated = [...this.selectedItems()];
       updated[slot] = item;
       this.selectedItems.set(updated);
@@ -70,19 +70,19 @@ export class ItemShopComponent {
     } else {
       const updated = [...this.selectedItems()];
       const firstEmpty = updated.findIndex(i => i === null);
-      if (firstEmpty !== -1){
+      if (firstEmpty !== -1) {
         updated[firstEmpty] = item;
         this.selectedItems.set(updated);
       }
     }
   }
 
-  onSlotClicked(index: number){
+  onSlotClicked(index: number) {
     const currentSlot = this.selectedSlot();
-    const items= [...this.selectedItems()];
+    const items = [...this.selectedItems()];
 
-    if (currentSlot === index){
-      if (items[index]){
+    if (currentSlot === index) {
+      if (items[index]) {
         items[index] = null;
         this.selectedItems.set(items);
       }

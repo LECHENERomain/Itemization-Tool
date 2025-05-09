@@ -40,11 +40,11 @@ interface RawItemData {
   effect?: any;
 }
 
-interface ItemsApiResponse{
+interface ItemsApiResponse {
   type: string;
   version: string;
   basic: any;
-  data: {[key: string]: RawItemData};
+  data: { [key: string]: RawItemData };
   groups: any[];
   tree: any[];
 }
@@ -86,7 +86,7 @@ export class ItemsService {
       .subscribe(data => {
         this.#itemsSignal.set(data);
         console.log("Items loaded successfully:", data.length);
-      }, error =>{
+      }, error => {
         console.error("Failed to fetch or process items.json:", error);
         this.#itemsSignal.set([]);
       });
