@@ -1,33 +1,31 @@
-.champion-prompt-input {
-  width: 150px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-right: 20px;
-  display: block;
-}
+.champion-selected-infos {
+  padding: 1rem;
+  background: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
 
-.champion-image {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
-.champion-selected-image {
-  width: 90px;
-  height: 90px;
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
-.champion-prompt {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  h3 {
+    color: #7dd3fc;
+  }
 }
 
 .validate-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
+  background: #1e40af;
+  color: #e0f2fe;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    transform: translateY(-1px);
+    background: #1e3a8a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
