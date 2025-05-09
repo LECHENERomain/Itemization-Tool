@@ -47,7 +47,7 @@ export class MinimapComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  selectTool(tool: 'draw' | 'erase' | 'clear' | 'pan'): void {
+  selectTool(tool: 'draw' | 'clear' | 'pan'): void {
 
     if (!this.canvas || !this.drawingCanvas?.nativeElement){
       console.error("MinimapComponent: Canvas or canvas element not initialized");
@@ -67,7 +67,6 @@ export class MinimapComponent implements AfterViewInit, OnDestroy {
       pen.color = 'red';
       pen.width = 2;
       this.canvas.freeDrawingBrush = pen;
-      canvasEl.style.pointerEvents = 'auto';
     }else if (tool === 'clear'){
       console.log("clearing canvas");
       this.canvas.clear();
