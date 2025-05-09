@@ -72,7 +72,7 @@ export class MinimapComponent implements AfterViewInit, OnDestroy {
       console.log("clearing canvas");
       this.canvas.clear();
       this.canvas.isDrawingMode = false;
-      canvasEl.style.pointerEvents = 'none';
+      this.selectTool('pan');
     } else if (tool === 'pan'){
       console.log("panning mode");
       this.canvas.isDrawingMode = false;
