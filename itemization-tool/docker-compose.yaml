@@ -1,0 +1,9 @@
+services:
+  appli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'itemization-tool'
+    ports:
+      - '8080:80'
+    restart: unless-stopped
